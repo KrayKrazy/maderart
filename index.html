@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maderart | Marcenaria de Tradição e Excelência em Brasília</title>
+  <meta name="description" content="Maderart — Marcenaria artesanal com as madeiras mais nobres do Brasil. Móveis sob medida, portas, painéis e muito mais. Trabalho com tradição, precisão e qualidade premium. Solicite seu orçamento."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+  <style>
+    /* ═══════════════════════════════════════
+       MADERART — VERDE LOURO & DOURADO
+    ═══════════════════════════════════════ */
+    :root {
+      --green-dark:   #1A2E1A;
+      --green-mid:    #223322;
+      --green:        #2D4A2D;
+      --green-light:  #3A5C3A;
+      --green-accent: #4A7A4A;
+      --gold:         #C8952A;
+      --gold-light:   #E8B84A;
+      --gold-pale:    #F5E6C0;
+      --cream:        #F8F3E8;
+      --brown:        #6B4226;
+      --text:         #1A1A1A;
+      --text-mid:     #4A4040;
+      --white:        #FFFFFF;
+      --r:            6px;
+      --r-lg:         14px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
+    h1,h2,h3,h4{font-family:'Playfair Display',serif;}
+    a{text-decoration:none;color:inherit;transition:all .3s;}
+    img{display:block;max-width:100%;}
+    .container{max-width:1200px;margin:0 auto;padding:0 32px;}
+
+    /* ─ BUTTONS ─ */
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border-radius:4px;font-family:'Jost',sans-serif;font-weight:700;font-size:.85rem;cursor:pointer;border:none;transition:all .3s;letter-spacing:1.5px;text-transform:uppercase;}
+    .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--green-dark);box-shadow:0 6px 24px rgba(200,149,42,.35);}
+    .btn-gold:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(200,149,42,.5);color:var(--green-dark);}
+    .btn-ghost{border:1.5px solid var(--gold);color:var(--gold-light);background:transparent;}
+    .btn-ghost:hover{background:var(--gold);color:var(--green-dark);}
+    .btn-outline-white{border:1.5px solid rgba(255,255,255,.4);color:#fff;background:rgba(255,255,255,.08);}
+    .btn-outline-white:hover{background:#fff;color:var(--green-dark);}
+    .btn-lg{padding:17px 40px;font-size:.95rem;}
+
+    /* ─ NAVBAR ─ */
+    #navbar{
+      position:fixed;top:0;left:0;right:0;z-index:900;
+      background:rgba(26,46,26,.96);backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(200,149,42,.2);
+      height:74px;padding:0 40px;
+      display:flex;align-items:center;justify-content:space-between;
+    }
+    .nav-brand{display:flex;align-items:center;gap:14px;}
+    .nav-logo-text{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:800;letter-spacing:2px;}
+    .nav-logo-text span{color:var(--gold-light);}
+    .nav-logo-sub{font-size:.6rem;letter-spacing:5px;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:'Jost',sans-serif;display:block;margin-top:-2px;}
+    .nav-links{display:flex;gap:30px;list-style:none;}
+    .nav-links a{font-size:.78rem;font-weight:600;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:1.5px;}
+    .nav-links a:hover{color:var(--gold-light);}
+    @media(max-width:900px){.nav-links{display:none;}}
+
+    /* ─ HERO SLIDER ─ */
+    #hero{position:relative;height:100vh;overflow:hidden;}
+    .hero-track{display:flex;height:100%;transition:transform .9s cubic-bezier(.77,0,.175,1);}
+    .hero-slide{min-width:100%;height:100%;position:relative;flex-shrink:0;}
+    .hero-slide img{width:100%;height:100%;object-fit:cover;}
+    .hero-slide::after{
+      content:'';position:absolute;inset:0;
+      background:linear-gradient(to right,rgba(26,46,26,.92) 0%,rgba(26,46,26,.65) 55%,rgba(26,46,26,.3) 100%);
+    }
+    .hero-content{
+      position:absolute;top:50%;left:0;transform:translateY(-50%);
+      z-index:5;padding:0 0 0 8%;max-width:650px;
+    }
+    .hero-tag{
+      display:inline-flex;align-items:center;gap:12px;
+      color:var(--gold-light);font-size:.68rem;font-weight:700;
+      text-transform:uppercase;letter-spacing:5px;margin-bottom:22px;
+    }
+    .hero-tag::before{content:'';width:36px;height:1px;background:var(--gold);}
+    h1.hero-h1{font-size:clamp(3rem,6vw,5.8rem);color:#fff;line-height:1.0;margin-bottom:10px;}
+    .hero-h1 em{color:var(--gold-light);font-style:italic;display:block;}
+    .hero-sub{color:rgba(255,255,255,.6);font-size:1rem;line-height:1.85;margin:18px 0 38px;max-width:480px;font-weight:300;}
+    .hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+
+    .hero-arr{
+      position:absolute;top:50%;transform:translateY(-50%);
+      width:50px;height:50px;border-radius:3px;
+      border:1px solid rgba(200,149,42,.4);
+      background:rgba(26,46,26,.7);backdrop-filter:blur(8px);
+      color:var(--gold-light);font-size:1rem;
+      display:flex;align-items:center;justify-content:center;
+      cursor:pointer;z-index:10;transition:all .3s;
+    }
+    .hero-arr:hover{background:var(--gold);color:var(--green-dark);border-color:var(--gold);}
+    .hero-arr.left{left:28px;}
+    .hero-arr.right{right:28px;}
+    .hero-dots{position:absolute;bottom:34px;left:8%;display:flex;gap:10px;z-index:10;}
+    .hero-dot{width:28px;height:3px;border-radius:2px;border:none;cursor:pointer;background:rgba(200,149,42,.3);transition:all .3s;padding:0;}
+    .hero-dot.active{background:var(--gold-light);width:52px;}
+
+    /* ─ GOLD DIVIDER ─ */
+    .gold-divider{height:3px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold-light),var(--gold),transparent);}
+
+    /* ─ STRIP DE VALORES ─ */
+    .strip{background:var(--green-dark);padding:18px 0;border-bottom:1px solid rgba(200,149,42,.15);}
+    .strip-inner{display:flex;justify-content:space-around;flex-wrap:wrap;gap:14px;}
+    .strip-item{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.6);font-size:.8rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;}
+    .strip-item i{color:var(--gold);}
+
+    /* ─ SEÇÃO SOBRE ─ */
+    #sobre{background:var(--cream);padding:100px 0;}
+    .sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+    @media(max-width:768px){.sobre-grid{grid-template-columns:1fr;}}
+    .sobre-img-wrap{position:relative;}
+    .sobre-img-main{border-radius:var(--r-lg);overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.15);}
+    .sobre-img-main img{width:100%;height:420px;object-fit:cover;}
+    .sobre-badge{
+      position:absolute;bottom:-24px;right:-24px;
+      background:linear-gradient(135deg,var(--gold),var(--gold-light));
+      color:var(--green-dark);padding:22px 28px;border-radius:var(--r-lg);
+      box-shadow:0 12px 36px rgba(200,149,42,.4);
+    }
+    .sobre-badge-num{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:800;line-height:1;display:block;}
+    .sobre-badge-txt{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;}
+    .sec-eyebrow{display:block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:4.5px;color:var(--gold);margin-bottom:12px;}
+    .sec-h2{font-size:clamp(1.8rem,3vw,2.8rem);color:var(--green-dark);margin-bottom:12px;line-height:1.2;}
+    .sec-h2-white{color:#fff;}
+    .gold-bar{width:52px;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));border-radius:10px;margin:0 0 22px;}
+    .gold-bar.center{margin:0 auto 22px;}
+    .sec-p{color:var(--text-mid);line-height:1.9;font-size:.95rem;}
+    .sobre-stats{display:flex;gap:32px;margin-top:32px;}
+    .stat{border-left:3px solid var(--gold);padding-left:16px;}
+    .stat-num{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--green-dark);font-weight:700;}
+    .stat-label{font-size:.78rem;color:var(--text-mid);text-transform:uppercase;letter-spacing:1px;font-weight:600;}
+
+    /* ─ MADEIRAS PREMIUM ─ */
+    #madeiras{background:var(--green-dark);padding:100px 0;}
+    .madeiras-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:56px;}
+    .madeira-card{
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(200,149,42,.15);
+      border-radius:var(--r-lg);overflow:hidden;
+      transition:transform .3s,border-color .3s,box-shadow .3s;
+    }
+    .madeira-card:hover{transform:translateY(-8px);border-color:rgba(200,149,42,.5);box-shadow:0 20px 55px rgba(0,0,0,.3);}
+    .madeira-img{height:180px;overflow:hidden;}
+    .madeira-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+    .madeira-card:hover .madeira-img img{transform:scale(1.07);}
+    .madeira-body{padding:22px 24px;}
+    .madeira-badge{display:inline-block;padding:3px 12px;background:rgba(200,149,42,.15);border:1px solid rgba(200,149,42,.3);border-radius:50px;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--gold-light);margin-bottom:12px;}
+    .madeira-card h3{color:#fff;font-size:1.2rem;margin-bottom:8px;}
+    .madeira-card p{color:rgba(255,255,255,.5);font-size:.85rem;line-height:1.65;}
+
+    /* ─ PORTFÓLIO SLIDER ─ */
+    #portfolio{background:var(--cream);padding:100px 0;}
+    .port-wrap{position:relative;margin-top:56px;overflow:hidden;}
+    .port-track{display:flex;transition:transform .6s cubic-bezier(.77,0,.175,1);}
+    .port-slide{
+      min-width:100%;position:relative;flex-shrink:0;
+      border-radius:var(--r-lg);overflow:hidden;
+      height:520px;
+    }
+    @media(max-width:768px){.port-slide{height:320px;}}
+    .port-slide img{width:100%;height:100%;object-fit:cover;}
+    .port-slide::after{
+      content:'';position:absolute;inset:0;
+      background:linear-gradient(to top,rgba(26,46,26,.85) 0%,transparent 60%);
+    }
+    .port-caption{
+      position:absolute;bottom:0;left:0;right:0;
+      z-index:5;padding:32px 40px;
+      display:flex;justify-content:space-between;align-items:flex-end;
+      flex-wrap:wrap;gap:16px;
+    }
+    .port-caption h3{font-size:1.5rem;color:#fff;}
+    .port-caption p{color:rgba(255,255,255,.6);font-size:.85rem;margin-top:4px;}
+
+    .port-nav{display:flex;justify-content:center;align-items:center;gap:16px;margin-top:28px;}
+    .port-arr{
+      width:48px;height:48px;border-radius:3px;
+      border:1.5px solid var(--gold);background:transparent;
+      color:var(--gold);font-size:.95rem;
+      display:flex;align-items:center;justify-content:center;
+      cursor:pointer;transition:all .3s;
+    }
+    .port-arr:hover{background:var(--gold);color:var(--green-dark);}
+    .port-dots{display:flex;gap:10px;}
+    .port-dot{width:28px;height:3px;border-radius:2px;border:none;cursor:pointer;background:rgba(200,149,42,.25);transition:all .3s;padding:0;}
+    .port-dot.active{background:var(--gold);width:52px;}
+
+    /* ─ SERVIÇOS ─ */
+    #servicos{background:var(--green-mid);padding:100px 0;}
+    .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-top:56px;}
+    .svc-card{
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(200,149,42,.12);
+      border-radius:var(--r-lg);padding:34px 28px;
+      transition:transform .3s,border-color .3s;
+    }
+    .svc-card:hover{transform:translateY(-6px);border-color:rgba(200,149,42,.4);}
+    .svc-icon{width:54px;height:54px;border-radius:var(--r);background:rgba(200,149,42,.12);border:1px solid rgba(200,149,42,.25);display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:1.3rem;margin-bottom:20px;}
+    .svc-card h3{color:#fff;font-size:1.1rem;margin-bottom:10px;}
+    .svc-card p{color:rgba(255,255,255,.45);font-size:.86rem;line-height:1.7;}
+
+    /* ─ CTA BANNER ─ */
+    .cta-band{
+      background:linear-gradient(135deg,var(--green-dark) 0%,var(--green) 50%,var(--green-dark) 100%);
+      border-top:1px solid rgba(200,149,42,.2);
+      border-bottom:1px solid rgba(200,149,42,.2);
+      padding:70px 0;
+    }
+    .cta-inner{text-align:center;}
+    .cta-inner h2{font-size:clamp(2rem,3.5vw,3rem);color:var(--gold-light);margin-bottom:14px;}
+    .cta-inner p{color:rgba(255,255,255,.55);margin-bottom:34px;font-size:1rem;max-width:560px;margin-left:auto;margin-right:auto;}
+
+    /* ─ FOOTER ─ */
+    footer{background:var(--green-dark);border-top:1px solid rgba(200,149,42,.15);padding:50px 0 22px;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:44px;margin-bottom:40px;}
+    @media(max-width:768px){.footer-grid{grid-template-columns:1fr;}}
+    .footer-brand h3{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--gold-light);margin-bottom:12px;}
+    .footer-brand p{color:rgba(255,255,255,.35);font-size:.85rem;line-height:1.75;max-width:290px;}
+    .footer-col h4{color:rgba(255,255,255,.9);font-size:.68rem;text-transform:uppercase;letter-spacing:3px;margin-bottom:18px;font-family:'Jost',sans-serif;}
+    .footer-col ul{list-style:none;}
+    .footer-col li{margin-bottom:10px;}
+    .footer-col a{color:rgba(255,255,255,.35);font-size:.85rem;}
+    .footer-col a:hover{color:var(--gold-light);}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+    .footer-bottom p{color:rgba(255,255,255,.2);font-size:.78rem;}
+
+    /* ─ FLOAT WA ─ */
+    .float-wa{position:fixed;bottom:28px;right:28px;z-index:999;}
+    .float-wa a{
+      display:flex;align-items:center;gap:10px;
+      background:#25D366;color:#fff;
+      padding:14px 22px;border-radius:50px;
+      font-weight:700;font-size:.85rem;
+      box-shadow:0 6px 22px rgba(37,211,102,.45);
+      animation:wa-pulse 2.5s ease-in-out infinite;
+    }
+    .float-wa a:hover{color:#fff;animation:none;transform:scale(1.06);}
+    .float-wa i{font-size:1.4rem;}
+    @keyframes wa-pulse{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+    /* ─ MADEIRAS HIGHLIGHT ROW ─ */
+    .wood-highlight{
+      background:var(--green-dark);
+      padding:24px 0;
+      border-top:1px solid rgba(200,149,42,.1);
+    }
+    .wood-row{display:flex;gap:48px;justify-content:center;flex-wrap:wrap;}
+    .wood-item{text-align:center;color:rgba(255,255,255,.4);font-size:.72rem;text-transform:uppercase;letter-spacing:2px;font-weight:600;}
+    .wood-item span{display:block;color:var(--gold-light);font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;margin-bottom:2px;letter-spacing:0;}
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header id="navbar">
+    <div class="nav-brand">
+      <div>
+        <div class="nav-logo-text"><span>Mader</span>art</div>
+        <span class="nav-logo-sub">Marcenaria Artesanal</span>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#sobre">Tradição</a></li>
+      <li><a href="#madeiras">Madeiras</a></li>
+      <li><a href="#portfolio">Portfólio</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+    </ul>
+    <a href="https://wa.me/5561996366598?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20trabalho%20em%20madeira." class="btn btn-gold" style="padding:11px 24px;font-size:.78rem;">
+      <i class="fa-brands fa-whatsapp"></i> Solicitar Orçamento
+    </a>
+  </header>
+
+  <!-- HERO SLIDER -->
+  <section id="hero">
+    <div class="hero-track" id="heroTrack">
+
+      <div class="hero-slide">
+        <img src="img/hero.jpg" alt="Marcenaria Artesanal Maderart"/>
+        <div class="hero-content">
+          <div class="hero-tag">Maderart · Marcenaria</div>
+          <h1 class="hero-h1">A arte da madeira<em>com tradição.</em></h1>
+          <p class="hero-sub">Trabalhamos com as madeiras mais nobres do Brasil, transformando cada peça em uma obra de arte duradoura.</p>
+          <div class="hero-btns">
+            <a href="https://wa.me/5561996366598?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20trabalho%20em%20madeira." class="btn btn-gold btn-lg">
+              <i class="fa-brands fa-whatsapp"></i> Solicitar Orçamento
+            </a>
+            <a href="#portfolio" class="btn btn-outline-white">Ver Portfólio</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slide">
+        <img src="img/portfolio1.jpg" alt="Móveis sob medida Maderart"/>
+        <div class="hero-content">
+          <div class="hero-tag">Móveis Sob Medida</div>
+          <h1 class="hero-h1">Móveis que<em>contam histórias.</em></h1>
+          <p class="hero-sub">Cada peça é projetada e executada com precisão milimétrica para durar gerações.</p>
+          <div class="hero-btns">
+            <a href="https://wa.me/5561996366598?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20trabalho%20em%20madeira." class="btn btn-gold btn-lg">
+              <i class="fa-brands fa-whatsapp"></i> Solicitar Orçamento
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slide">
+        <img src="img/portfolio2.jpg" alt="Portas e painéis Maderart"/>
+        <div class="hero-content">
+          <div class="hero-tag">Portas & Painéis</div>
+          <h1 class="hero-h1">Entradas que<em>impressionam.</em></h1>
+          <p class="hero-sub">Portas e painéis em madeira maciça que valorizam e ennobrecem qualquer ambiente.</p>
+          <div class="hero-btns">
+            <a href="https://wa.me/5561996366598?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20trabalho%20em%20madeira." class="btn btn-gold btn-lg">
+              <i class="fa-brands fa-whatsapp"></i> Solicitar Orçamento
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <button class="hero-arr left" id="heroPrev"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="hero-arr right" id="heroNext"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="hero-dots" id="heroDots"></div>
+  </section>
+
+  <div class="gold-divider"></div>
+
+  <!-- STRIP -->
+  <div class="strip">
+    <div class="container strip-inner">
+      <div class="strip-item"><i class="fa-solid fa-tree"></i> Madeiras Nativas Certificadas</div>
+      <div class="strip-item"><i class="fa-solid fa-ruler-combined"></i> Sob Medida</div>
+      <div class="strip-item"><i class="fa-solid fa-award"></i> Décadas de Tradição</div>
+      <div class="strip-item"><i class="fa-solid fa-handshake"></i> Garantia de Qualidade</div>
+      <div class="strip-item"><i class="fa-solid fa-phone"></i> (61) 99636-6598</div>
+    </div>
+  </div>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-img-wrap" data-aos="fade-right">
+          <div class="sobre-img-main">
+            <img src="img/madeiras.jpg" alt="Coleção de madeiras nobres Maderart"/>
+          </div>
+          <div class="sobre-badge" data-aos="zoom-in" data-aos-delay="300">
+            <span class="sobre-badge-num">100%</span>
+            <span class="sobre-badge-txt">Artesanal</span>
+          </div>
+        </div>
+        <div data-aos="fade-left" data-aos-delay="100">
+          <span class="sec-eyebrow">Nossa História</span>
+          <h2 class="sec-h2">Tradição que se<br>mede em décadas</h2>
+          <div class="gold-bar"></div>
+          <p class="sec-p" style="margin-bottom:18px;">
+            A Maderart nasceu da paixão pela madeira e pelo trabalho artesanal feito com cuidado e precisão. Trabalhamos com as espécies mais nobres do Brasil, respeitando cada fio e veio natural da madeira.
+          </p>
+          <p class="sec-p">
+            Do projeto à entrega, acompanhamos cada etapa com rigor técnico e compromisso com a qualidade que somente a experiência pode proporcionar. Cada peça é única — assim como cada cliente.
+          </p>
+          <div class="sobre-stats">
+            <div class="stat">
+              <div class="stat-num">+20</div>
+              <div class="stat-label">Anos de experiência</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">+15</div>
+              <div class="stat-label">Espécies trabalhadas</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">+500</div>
+              <div class="stat-label">Projetos entregues</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MADEIRAS PREMIUM -->
+  <section id="madeiras">
+    <div class="container">
+      <div style="text-align:center" data-aos="fade-up">
+        <span class="sec-eyebrow" style="color:var(--gold)">Espécies Nobres</span>
+        <h2 class="sec-h2 sec-h2-white">As madeiras mais<br>preciosas do Brasil</h2>
+        <div class="gold-bar center"></div>
+        <p class="sec-p light" style="color:rgba(255,255,255,.45);max-width:560px;margin:0 auto;">
+          Trabalhamos com as espécies mais raras e valorizadas, garantindo beleza, durabilidade e exclusividade para cada projeto.
+        </p>
+      </div>
+
+      <div class="madeiras-grid">
+
+        <div class="madeira-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="madeira-img"><img src="img/paubrasil.jpg" alt="Pau Brasil"/></div>
+          <div class="madeira-body">
+            <span class="madeira-badge">⭐ Premium</span>
+            <h3>Pau Brasil</h3>
+            <p>A mais nobre das madeiras brasileiras. Tom avermelhado profundo, grã cruzada e dureza excepcional. Símbolo do Brasil, ideal para peças exclusivas e de alto valor.</p>
+          </div>
+        </div>
+
+        <div class="madeira-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="madeira-img"><img src="img/madeiras.jpg" alt="Mogno Brasileiro" style="object-position:left"/></div>
+          <div class="madeira-body">
+            <span class="madeira-badge">⭐ Premium</span>
+            <h3>Mogno Brasileiro</h3>
+            <p>Mogno legítimo com seu característico tom avermelhado-dourado e lustre natural. Utilizado em móveis de altíssimo padrão, entalhes e projetos arquitetônicos de luxo.</p>
+          </div>
+        </div>
+
+        <div class="madeira-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="madeira-img"><img src="img/portfolio1.jpg" alt="Ipê" style="object-position:center"/></div>
+          <div class="madeira-body">
+            <span class="madeira-badge">Nobre</span>
+            <h3>Ipê</h3>
+            <p>Uma das madeiras mais resistentes do mundo. Coloração amarelada a castanho-oliva, alta resistência ao desgaste. Ideal para ambientes internos e externos de exigência.</p>
+          </div>
+        </div>
+
+        <div class="madeira-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="madeira-img"><img src="img/portfolio2.jpg" alt="Cedro Rosa"/></div>
+          <div class="madeira-body">
+            <span class="madeira-badge">Nobre</span>
+            <h3>Cedro Rosa</h3>
+            <p>Madeira aromática de coloração rosada, leve e de fácil trabalhabilidade. Favorita para portas, painéis, entalhes e marcenaria fina de alta qualidade.</p>
+          </div>
+        </div>
+
+        <div class="madeira-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="madeira-img"><img src="img/portfolio3.jpg" alt="Jatobá"/></div>
+          <div class="madeira-body">
+            <span class="madeira-badge">Durável</span>
+            <h3>Jatobá</h3>
+            <p>Madeira de alta densidade e beleza natural, com tons que vão do salmão ao vermelho-escuro. Extremamente durável, muito valorizada em pisos e móveis robustos.</p>
+          </div>
+        </div>
+
+        <div class="madeira-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="madeira-img"><img src="img/hero.jpg" alt="Teca"/></div>
+          <div class="madeira-body">
+            <span class="madeira-badge">Importada</span>
+            <h3>Teca & Outras</h3>
+            <p>Também trabalhamos com Teca, Carvalho, Cumaru, Louro-Pardo e demais espécies nacionais e importadas, atendendo qualquer projeto com o padrão Maderart.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFÓLIO SLIDER -->
+  <section id="portfolio">
+    <div class="container">
+      <div data-aos="fade-up">
+        <span class="sec-eyebrow">Nosso Portfólio</span>
+        <h2 class="sec-h2">Obras que falam<br>por si mesmas</h2>
+        <div class="gold-bar"></div>
+      </div>
+
+      <div class="port-wrap" data-aos="fade-up" data-aos-delay="100">
+        <div class="port-track" id="portTrack">
+
+          <div class="port-slide">
+            <img src="img/portfolio1.jpg" alt="Mesa e cadeiras em madeira maciça"/>
+            <div class="port-caption">
+              <div>
+                <h3>Mesa e Cadeiras em Madeira Maciça</h3>
+                <p>Mogno Brasileiro · Acabamento natural envernizado</p>
+              </div>
+              <a href="https://wa.me/5561996366598?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20trabalho%20em%20madeira." class="btn btn-gold" style="white-space:nowrap;flex-shrink:0;">
+                <i class="fa-brands fa-whatsapp"></i> Orçamento
+              </a>
+            </div>
+          </div>
+
+          <div class="port-slide">
+            <img src="img/portfolio2.jpg" alt="Portas em madeira nobre entalhada"/>
+            <div class="port-caption">
+              <div>
+                <h3>Portas em Madeira Nobre Entalhada</h3>
+                <p>Cedro Rosa · Detalhes artesanais em alto-relevo</p>
+              </div>
+              <a href="https://wa.me/5561996366598?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20trabalho%20em%20madeira." class="btn btn-gold" style="white-space:nowrap;flex-shrink:0;">
+                <i class="fa-brands fa-whatsapp"></i> Orçamento
+              </a>
+            </div>
+          </div>
+
+          <div class="port-slide">
+            <img src="img/portfolio3.jpg" alt="Cozinha planejada em madeira maciça"/>
+            <div class="port-caption">
+              <div>
+                <h3>Cozinha Planejada Madeira Maciça</h3>
+                <p>Ipê · Projeto exclusivo sob medida</p>
+              </div>
+              <a href="https://wa.me/5561996366598?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20trabalho%20em%20madeira." class="btn btn-gold" style="white-space:nowrap;flex-shrink:0;">
+                <i class="fa-brands fa-whatsapp"></i> Orçamento
+              </a>
+            </div>
+          </div>
+
+          <div class="port-slide">
+            <img src="img/hero.jpg" alt="Oficina Maderart — tradição artesanal"/>
+            <div class="port-caption">
+              <div>
+                <h3>Marcenaria Artesanal de Alto Padrão</h3>
+                <p>Todas as espécies · Projetos residenciais e comerciais</p>
+              </div>
+              <a href="https://wa.me/5561996366598?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20trabalho%20em%20madeira." class="btn btn-gold" style="white-space:nowrap;flex-shrink:0;">
+                <i class="fa-brands fa-whatsapp"></i> Orçamento
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <div class="port-nav">
+          <button class="port-arr" id="portPrev"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="port-dots" id="portDots"></div>
+          <button class="port-arr" id="portNext"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos">
+    <div class="container">
+      <div style="text-align:center" data-aos="fade-up">
+        <span class="sec-eyebrow" style="color:var(--gold)">O Que Fazemos</span>
+        <h2 class="sec-h2 sec-h2-white">Serviços de<br>excelência em madeira</h2>
+        <div class="gold-bar center"></div>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="svc-icon"><i class="fa-solid fa-couch"></i></div>
+          <h3>Móveis Sob Medida</h3>
+          <p>Mesas, cadeiras, racks, estantes, camas e todo tipo de mobiliário residencial e corporativo em madeira maciça.</p>
+        </div>
+        <div class="svc-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="svc-icon"><i class="fa-solid fa-door-open"></i></div>
+          <h3>Portas & Painéis</h3>
+          <p>Portas de entrada, internas, painéis decorativos e revestimentos em madeira com design exclusivo e acabamento impecável.</p>
+        </div>
+        <div class="svc-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="svc-icon"><i class="fa-solid fa-kitchen-set"></i></div>
+          <h3>Cozinhas Planejadas</h3>
+          <p>Projetos completos de cozinhas em madeira maciça, com armários, bancadas e detalhes personalizados para cada espaço.</p>
+        </div>
+        <div class="svc-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="svc-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+          <h3>Projetos Arquitetônicos</h3>
+          <p>Trabalhos em parceria com arquitetos e designers de interiores para projetos corporativos e residenciais de alto padrão.</p>
+        </div>
+        <div class="svc-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="svc-icon"><i class="fa-solid fa-star"></i></div>
+          <h3>Entalhes & Esculturas</h3>
+          <p>Arte em madeira com técnicas tradicionais de entalhe, escultura e marchetaria para peças decorativas únicas e exclusivas.</p>
+        </div>
+        <div class="svc-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="svc-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h3>Restauração & Reparo</h3>
+          <p>Restauração de móveis antigos e peças históricas com respeito ao original, devolvendo vida e beleza a cada peça.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <div class="cta-band">
+    <div class="container cta-inner" data-aos="zoom-in">
+      <h2>Pronto para transformar seu espaço?</h2>
+      <p>Entre em contato agora e receba um orçamento personalizado. Atendemos projetos residenciais, comerciais e institucionais em todo o Distrito Federal.</p>
+      <a href="https://wa.me/5561996366598?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20trabalho%20em%20madeira." class="btn btn-gold btn-lg">
+        <i class="fa-brands fa-whatsapp"></i> Solicitar Orçamento Agora
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Maderart</h3>
+          <p>Marcenaria artesanal com as madeiras mais nobres do Brasil. Tradição, qualidade e precisão em cada detalhe.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Serviços</h4>
+          <ul>
+            <li><a href="#servicos">Móveis Sob Medida</a></li>
+            <li><a href="#servicos">Portas & Painéis</a></li>
+            <li><a href="#servicos">Cozinhas</a></li>
+            <li><a href="#servicos">Entalhes</a></li>
+            <li><a href="#servicos">Restauração</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul>
+            <li><a href="https://wa.me/5561996366598">(61) 99636-6598</a></li>
+            <li><a href="#madeiras">Madeiras Premium</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Maderart — Marcenaria Artesanal · Brasília, DF</p>
+        <p>(61) 99636-6598</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOAT WA -->
+  <div class="float-wa">
+    <a href="https://wa.me/5561996366598?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20trabalho%20em%20madeira." target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> Solicitar Orçamento
+    </a>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 900, offset: 60 });
+
+    /* ── HERO SLIDER ── */
+    (function(){
+      const track = document.getElementById('heroTrack');
+      const dotsWrap = document.getElementById('heroDots');
+      const total = track.children.length;
+      let cur = 0, timer;
+      for(let i=0;i<total;i++){
+        const d=document.createElement('button');
+        d.className='hero-dot'+(i===0?' active':'');
+        d.addEventListener('click',()=>{clearInterval(timer);go(i);start();});
+        dotsWrap.appendChild(d);
+      }
+      function go(n){
+        cur=(n+total)%total;
+        track.style.transform=`translateX(-${cur*100}%)`;
+        dotsWrap.querySelectorAll('.hero-dot').forEach((d,i)=>d.classList.toggle('active',i===cur));
+      }
+      document.getElementById('heroPrev').addEventListener('click',()=>{clearInterval(timer);go(cur-1);start();});
+      document.getElementById('heroNext').addEventListener('click',()=>{clearInterval(timer);go(cur+1);start();});
+      function start(){timer=setInterval(()=>go(cur+1),6000);}
+      start();
+    })();
+
+    /* ── PORTFÓLIO SLIDER ── */
+    (function(){
+      const track = document.getElementById('portTrack');
+      const dotsWrap = document.getElementById('portDots');
+      const total = track.children.length;
+      let cur = 0, timer;
+      for(let i=0;i<total;i++){
+        const d=document.createElement('button');
+        d.className='port-dot'+(i===0?' active':'');
+        d.addEventListener('click',()=>{clearInterval(timer);go(i);start();});
+        dotsWrap.appendChild(d);
+      }
+      function go(n){
+        cur=(n+total)%total;
+        track.style.transform=`translateX(-${cur*100}%)`;
+        dotsWrap.querySelectorAll('.port-dot').forEach((d,i)=>d.classList.toggle('active',i===cur));
+      }
+      document.getElementById('portPrev').addEventListener('click',()=>{clearInterval(timer);go(cur-1);start();});
+      document.getElementById('portNext').addEventListener('click',()=>{clearInterval(timer);go(cur+1);start();});
+      function start(){timer=setInterval(()=>go(cur+1),5000);}
+      start();
+    })();
+  </script>
+</body>
+</html>
