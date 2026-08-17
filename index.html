@@ -259,6 +259,29 @@
     .wood-row{display:flex;gap:48px;justify-content:center;flex-wrap:wrap;}
     .wood-item{text-align:center;color:rgba(255,255,255,.4);font-size:.72rem;text-transform:uppercase;letter-spacing:2px;font-weight:600;}
     .wood-item span{display:block;color:var(--gold-light);font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;margin-bottom:2px;letter-spacing:0;}
+    /* ─ MOBILE OPTIMIZATIONS ─ */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-btn span { display: none; }
+      .nav-btn { padding: 10px 14px !important; font-size: 1.2rem !important; }
+      .hero-content { padding: 0 20px; text-align: left; max-width: 100%; top: 55%; }
+      h1.hero-h1 { font-size: 3rem; }
+      .hero-arr { display: none; }
+      .hero-btns { flex-direction: column; width: 100%; }
+      .hero-btns .btn { width: 100%; justify-content: center; }
+      .hero-dots { left: 20px; bottom: 20px; }
+      .strip-inner { flex-direction: column; gap: 16px; padding: 10px 0; }
+      .strip-item { font-size: 0.9rem; justify-content: center; }
+      .sobre-grid { gap: 40px; }
+      .sobre-img-main img { height: 320px; }
+      .sobre-badge { bottom: -15px; right: 10px; padding: 15px 20px; }
+      .sec-h2 { font-size: 2.2rem; }
+      #sobre, #madeiras, #portfolio, #servicos, #bastidores { padding: 60px 0; }
+      .container { padding: 0 20px; }
+      .cta-inner h2 { font-size: 1.8rem; }
+      .port-caption { padding: 20px; flex-direction: column; align-items: flex-start; }
+      .port-caption .btn { width: 100%; justify-content: center; }
+    }
   </style>
 </head>
 <body>
@@ -278,8 +301,8 @@
       <li><a href="#servicos">Serviços</a></li>
       <li><a href="#bastidores">Vídeos</a></li>
     </ul>
-    <a href="https://wa.me/5561996366598?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20trabalho%20em%20madeira." class="btn btn-gold" style="padding:11px 24px;font-size:.78rem;">
-      <i class="fa-brands fa-whatsapp"></i> Solicitar Orçamento
+    <a href="https://wa.me/5561996366598?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20trabalho%20em%20madeira." class="btn btn-gold nav-btn" style="padding:11px 24px;font-size:.78rem;">
+      <i class="fa-brands fa-whatsapp"></i> <span>Solicitar Orçamento</span>
     </a>
   </header>
 
