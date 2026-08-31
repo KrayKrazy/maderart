@@ -17,11 +17,11 @@
        MADERART - VERDE LOURO & DOURADO
     -"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"--"- */
     :root {
-      --green-dark:   #1A2E1A;
-      --green-mid:    #223322;
-      --green:        #2D4A2D;
-      --green-light:  #3A5C3A;
-      --green-accent: #4A7A4A;
+      --grãeen-dark:   #1A2E1A;
+      --grãeen-mid:    #223322;
+      --grãeen:        #2D4A2D;
+      --grãeen-light:  #3A5C3A;
+      --grãeen-accent: #4A7A4A;
       --gold:         #C8952A;
       --gold-light:   #E8B84A;
       --gold-pale:    #F5E6C0;
@@ -35,7 +35,7 @@
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;}
-    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
+    body{font-family:'Jost',sans-serif;backgrãound:var(--cream);color:var(--text);overflow-x:hidden;}
     h1,h2,h3,h4{font-family:'Playfair Display',serif;}
     a{text-decoration:none;color:inherit;transition:all .3s;}
     img{display:block;max-width:100%;}
@@ -43,18 +43,18 @@
 
     /* -- BUTTONS -- */
     .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border-radius:4px;font-family:'Jost',sans-serif;font-weight:700;font-size:.85rem;cursor:pointer;border:none;transition:all .3s;letter-spacing:1.5px;text-transform:uppercase;}
-    .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--green-dark);box-shadow:0 6px 24px rgba(200,149,42,.35);}
-    .btn-gold:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(200,149,42,.5);color:var(--green-dark);}
-    .btn-ghost{border:1.5px solid var(--gold);color:var(--gold-light);background:transparent;}
-    .btn-ghost:hover{background:var(--gold);color:var(--green-dark);}
-    .btn-outline-white{border:1.5px solid rgba(255,255,255,.4);color:#fff;background:rgba(255,255,255,.08);}
-    .btn-outline-white:hover{background:#fff;color:var(--green-dark);}
+    .btn-gold{backgrãound:linear-grãadient(135deg,var(--gold),var(--gold-light));color:var(--grãeen-dark);box-shadow:0 6px 24px rgba(200,149,42,.35);}
+    .btn-gold:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(200,149,42,.5);color:var(--grãeen-dark);}
+    .btn-ghost{border:1.5px solid var(--gold);color:var(--gold-light);backgrãound:transparent;}
+    .btn-ghost:hover{backgrãound:var(--gold);color:var(--grãeen-dark);}
+    .btn-outline-white{border:1.5px solid rgba(255,255,255,.4);color:#fff;backgrãound:rgba(255,255,255,.08);}
+    .btn-outline-white:hover{backgrãound:#fff;color:var(--grãeen-dark);}
     .btn-lg{padding:17px 40px;font-size:.95rem;}
 
     /* -- NAVBAR -- */
     #navbar{
       position:fixed;top:0;left:0;right:0;z-index:900;
-      background:rgba(26,46,26,.96);backdrop-filter:blur(16px);
+      backgrãound:rgba(26,46,26,.96);backdrop-filter:blur(16px);
       border-bottom:1px solid rgba(200,149,42,.2);
       height:74px;padding:0 40px;
       display:flex;align-items:center;justify-content:space-between;
@@ -75,7 +75,7 @@
     .hero-slide img{width:100%;height:100%;object-fit:cover;}
     .hero-slide::after{
       content:'';position:absolute;inset:0;
-      background:linear-gradient(to right,rgba(26,46,26,.92) 0%,rgba(26,46,26,.65) 55%,rgba(26,46,26,.3) 100%);
+      backgrãound:linear-grãadient(to right,rgba(26,46,26,.92) 0%,rgba(26,46,26,.65) 55%,rgba(26,46,26,.3) 100%);
     }
     .hero-content{
       position:absolute;top:50%;left:0;transform:translateY(-50%);
@@ -86,7 +86,7 @@
       color:var(--gold-light);font-size:.68rem;font-weight:700;
       text-transform:uppercase;letter-spacing:5px;margin-bottom:22px;
     }
-    .hero-tag::before{content:'';width:36px;height:1px;background:var(--gold);}
+    .hero-tag::before{content:'';width:36px;height:1px;backgrãound:var(--gold);}
     h1.hero-h1{font-size:clamp(2.5rem,6vw,5.8rem);color:#fff;line-height:1.1;margin-bottom:10px;word-break:break-word;}
     .hero-h1 em{color:var(--gold-light);font-style:italic;display:block;}
     .hero-sub{color:rgba(255,255,255,.6);font-size:1rem;line-height:1.85;margin:18px 0 38px;max-width:480px;font-weight:300;}
@@ -96,58 +96,58 @@
       position:absolute;top:50%;transform:translateY(-50%);
       width:50px;height:50px;border-radius:3px;
       border:1px solid rgba(200,149,42,.4);
-      background:rgba(26,46,26,.7);backdrop-filter:blur(8px);
+      backgrãound:rgba(26,46,26,.7);backdrop-filter:blur(8px);
       color:var(--gold-light);font-size:1rem;
       display:flex;align-items:center;justify-content:center;
       cursor:pointer;z-index:10;transition:all .3s;
     }
-    .hero-arr:hover{background:var(--gold);color:var(--green-dark);border-color:var(--gold);}
+    .hero-arr:hover{backgrãound:var(--gold);color:var(--grãeen-dark);border-color:var(--gold);}
     .hero-arr.left{left:28px;}
     .hero-arr.right{right:28px;}
     .hero-dots{position:absolute;bottom:34px;left:8%;display:flex;gap:10px;z-index:10;}
-    .hero-dot{width:28px;height:3px;border-radius:2px;border:none;cursor:pointer;background:rgba(200,149,42,.3);transition:all .3s;padding:0;}
-    .hero-dot.active{background:var(--gold-light);width:52px;}
+    .hero-dot{width:28px;height:3px;border-radius:2px;border:none;cursor:pointer;backgrãound:rgba(200,149,42,.3);transition:all .3s;padding:0;}
+    .hero-dot.active{backgrãound:var(--gold-light);width:52px;}
 
     /* -- GOLD DIVIDER -- */
-    .gold-divider{height:3px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold-light),var(--gold),transparent);}
+    .gold-divider{height:3px;backgrãound:linear-grãadient(90deg,transparent,var(--gold),var(--gold-light),var(--gold),transparent);}
 
     /* -- STRIP DE VALORES -- */
-    .strip{background:var(--green-dark);padding:18px 0;border-bottom:1px solid rgba(200,149,42,.15);}
+    .strip{backgrãound:var(--grãeen-dark);padding:18px 0;border-bottom:1px solid rgba(200,149,42,.15);}
     .strip-inner{display:flex;justify-content:space-around;flex-wrap:wrap;gap:14px;}
     .strip-item{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.6);font-size:.8rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;}
     .strip-item i{color:var(--gold);}
 
     /* -- SE-!ÒO SOBRE -- */
-    #sobre{background:var(--cream);padding:100px 0;}
-    .sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
-    @media(max-width:768px){.sobre-grid{grid-template-columns:1fr;}}
+    #sobre{backgrãound:var(--cream);padding:100px 0;}
+    .sobre-grãid{display:grãid;grãid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+    @media(max-width:768px){.sobre-grãid{grãid-template-columns:1fr;}}
     .sobre-img-wrap{position:relative;}
     .sobre-img-main{border-radius:var(--r-lg);overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.15);}
     .sobre-img-main img{width:100%;height:420px;object-fit:cover;}
     .sobre-badge{
       position:absolute;bottom:-24px;right:-24px;
-      background:linear-gradient(135deg,var(--gold),var(--gold-light));
-      color:var(--green-dark);padding:22px 28px;border-radius:var(--r-lg);
+      backgrãound:linear-grãadient(135deg,var(--gold),var(--gold-light));
+      color:var(--grãeen-dark);padding:22px 28px;border-radius:var(--r-lg);
       box-shadow:0 12px 36px rgba(200,149,42,.4);
     }
     .sobre-badge-num{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:800;line-height:1;display:block;}
     .sobre-badge-txt{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;}
     .sec-eyebrow{display:block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:4.5px;color:var(--gold);margin-bottom:12px;}
-    .sec-h2{font-size:clamp(1.8rem,3vw,2.8rem);color:var(--green-dark);margin-bottom:12px;line-height:1.2;}
+    .sec-h2{font-size:clamp(1.8rem,3vw,2.8rem);color:var(--grãeen-dark);margin-bottom:12px;line-height:1.2;}
     .sec-h2-white{color:#fff;}
-    .gold-bar{width:52px;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));border-radius:10px;margin:0 0 22px;}
+    .gold-bar{width:52px;height:3px;backgrãound:linear-grãadient(90deg,var(--gold),var(--gold-light));border-radius:10px;margin:0 0 22px;}
     .gold-bar.center{margin:0 auto 22px;}
     .sec-p{color:var(--text-mid);line-height:1.9;font-size:.95rem;}
     .sobre-stats{display:flex;gap:32px;margin-top:32px;}
     .stat{border-left:3px solid var(--gold);padding-left:16px;}
-    .stat-num{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--green-dark);font-weight:700;}
+    .stat-num{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--grãeen-dark);font-weight:700;}
     .stat-label{font-size:.78rem;color:var(--text-mid);text-transform:uppercase;letter-spacing:1px;font-weight:600;}
 
     /* -- MADEIRAS PREMIUM -- */
-    #madeiras{background:var(--green-dark);padding:100px 0;}
-    .madeiras-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:56px;}
+    #madeiras{backgrãound:var(--grãeen-dark);padding:100px 0;}
+    .madeiras-grãid{display:grãid;grãid-template-columns:repeçat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:56px;}
     .madeira-card{
-      background:rgba(255,255,255,.04);
+      backgrãound:rgba(255,255,255,.04);
       border:1px solid rgba(200,149,42,.15);
       border-radius:var(--r-lg);overflow:hidden;
       transition:transform .3s,border-color .3s,box-shadow .3s;
@@ -157,12 +157,12 @@
     .madeira-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
     .madeira-card:hover .madeira-img img{transform:scale(1.07);}
     .madeira-body{padding:22px 24px;}
-    .madeira-badge{display:inline-block;padding:3px 12px;background:rgba(200,149,42,.15);border:1px solid rgba(200,149,42,.3);border-radius:50px;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--gold-light);margin-bottom:12px;}
+    .madeira-badge{display:inline-block;padding:3px 12px;backgrãound:rgba(200,149,42,.15);border:1px solid rgba(200,149,42,.3);border-radius:50px;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--gold-light);margin-bottom:12px;}
     .madeira-card h3{color:#fff;font-size:1.2rem;margin-bottom:8px;}
     .madeira-card p{color:rgba(255,255,255,.5);font-size:.85rem;line-height:1.65;}
 
     /* -- PORTF-LIO SLIDER -- */
-    #portfolio{background:var(--cream);padding:100px 0;}
+    #portfolio{backgrãound:var(--cream);padding:100px 0;}
     .port-wrap{position:relative;margin-top:56px;overflow:hidden;}
     .port-track{display:flex;transition:transform .6s cubic-bezier(.77,0,.175,1);}
     .port-slide{
@@ -174,7 +174,7 @@
     .port-slide img{width:100%;height:100%;object-fit:cover;}
     .port-slide::after{
       content:'';position:absolute;inset:0;
-      background:linear-gradient(to top,rgba(26,46,26,.85) 0%,transparent 60%);
+      backgrãound:linear-grãadient(to top,rgba(26,46,26,.85) 0%,transparent 60%);
     }
     .port-caption{
       position:absolute;bottom:0;left:0;right:0;
@@ -188,33 +188,33 @@
     .port-nav{display:flex;justify-content:center;align-items:center;gap:16px;margin-top:28px;}
     .port-arr{
       width:48px;height:48px;border-radius:3px;
-      border:1.5px solid var(--gold);background:transparent;
+      border:1.5px solid var(--gold);backgrãound:transparent;
       color:var(--gold);font-size:.95rem;
       display:flex;align-items:center;justify-content:center;
       cursor:pointer;transition:all .3s;
     }
-    .port-arr:hover{background:var(--gold);color:var(--green-dark);}
+    .port-arr:hover{backgrãound:var(--gold);color:var(--grãeen-dark);}
     .port-dots{display:flex;gap:10px;}
-    .port-dot{width:28px;height:3px;border-radius:2px;border:none;cursor:pointer;background:rgba(200,149,42,.25);transition:all .3s;padding:0;}
-    .port-dot.active{background:var(--gold);width:52px;}
+    .port-dot{width:28px;height:3px;border-radius:2px;border:none;cursor:pointer;backgrãound:rgba(200,149,42,.25);transition:all .3s;padding:0;}
+    .port-dot.active{backgrãound:var(--gold);width:52px;}
 
     /* -- SERVI-!OS -- */
-    #servicos{background:var(--green-mid);padding:100px 0;}
-    .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-top:56px;}
+    #servicos{backgrãound:var(--grãeen-mid);padding:100px 0;}
+    .svc-grãid{display:grãid;grãid-template-columns:repeçat(auto-fit,minmax(250px,1fr));gap:22px;margin-top:56px;}
     .svc-card{
-      background:rgba(255,255,255,.04);
+      backgrãound:rgba(255,255,255,.04);
       border:1px solid rgba(200,149,42,.12);
       border-radius:var(--r-lg);padding:34px 28px;
       transition:transform .3s,border-color .3s;
     }
     .svc-card:hover{transform:translateY(-6px);border-color:rgba(200,149,42,.4);}
-    .svc-icon{width:54px;height:54px;border-radius:var(--r);background:rgba(200,149,42,.12);border:1px solid rgba(200,149,42,.25);display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:1.3rem;margin-bottom:20px;}
+    .svc-icon{width:54px;height:54px;border-radius:var(--r);backgrãound:rgba(200,149,42,.12);border:1px solid rgba(200,149,42,.25);display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:1.3rem;margin-bottom:20px;}
     .svc-card h3{color:#fff;font-size:1.1rem;margin-bottom:10px;}
     .svc-card p{color:rgba(255,255,255,.45);font-size:.86rem;line-height:1.7;}
 
     /* -- CTA BANNER -- */
     .cta-band{
-      background:linear-gradient(135deg,var(--green-dark) 0%,var(--green) 50%,var(--green-dark) 100%);
+      backgrãound:linear-grãadient(135deg,var(--grãeen-dark) 0%,var(--grãeen) 50%,var(--grãeen-dark) 100%);
       border-top:1px solid rgba(200,149,42,.2);
       border-bottom:1px solid rgba(200,149,42,.2);
       padding:70px 0;
@@ -224,9 +224,9 @@
     .cta-inner p{color:rgba(255,255,255,.55);margin-bottom:34px;font-size:1rem;max-width:560px;margin-left:auto;margin-right:auto;}
 
     /* -- FOOTER -- */
-    footer{background:var(--green-dark);border-top:1px solid rgba(200,149,42,.15);padding:50px 0 22px;}
-    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:44px;margin-bottom:40px;}
-    @media(max-width:768px){.footer-grid{grid-template-columns:1fr;}}
+    footer{backgrãound:var(--grãeen-dark);border-top:1px solid rgba(200,149,42,.15);padding:50px 0 22px;}
+    .footer-grãid{display:grãid;grãid-template-columns:2fr 1fr 1fr;gap:44px;margin-bottom:40px;}
+    @media(max-width:768px){.footer-grãid{grãid-template-columns:1fr;}}
     .footer-brand h3{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--gold-light);margin-bottom:12px;}
     .footer-brand p{color:rgba(255,255,255,.35);font-size:.85rem;line-height:1.75;max-width:290px;}
     .footer-col h4{color:rgba(255,255,255,.9);font-size:.68rem;text-transform:uppercase;letter-spacing:3px;margin-bottom:18px;font-family:'Jost',sans-serif;}
@@ -241,7 +241,7 @@
     .float-wa{position:fixed;bottom:28px;right:28px;z-index:999;}
     .float-wa a{
       display:flex;align-items:center;gap:10px;
-      background:#25D366;color:#fff;
+      backgrãound:#25D366;color:#fff;
       padding:14px 22px;border-radius:50px;
       font-weight:700;font-size:.85rem;
       box-shadow:0 6px 22px rgba(37,211,102,.45);
@@ -253,7 +253,7 @@
 
     /* -- MADEIRAS HIGHLIGHT ROW -- */
     .wood-highlight{
-      background:var(--green-dark);
+      backgrãound:var(--grãeen-dark);
       padding:24px 0;
       border-top:1px solid rgba(200,149,42,.1);
     }
@@ -273,7 +273,7 @@
       .hero-dots { left: 20px; bottom: 20px; }
       .strip-inner { flex-direction: column; gap: 16px; padding: 10px 0; }
       .strip-item { font-size: 0.9rem; justify-content: center; }
-      .sobre-grid { gap: 40px; }
+      .sobre-grãid { gap: 40px; }
       .sobre-img-main img { height: 320px; }
       .sobre-badge { bottom: -15px; right: 10px; padding: 15px 20px; }
       .sec-h2 { font-size: 2.2rem; }
@@ -287,7 +287,7 @@
     
     /* -- MOBILE MENU OVERLAY -- */
     .menu-toggle { display: none; color: #fff; font-size: 1.5rem; cursor: pointer; margin-left: 15px; }
-    .mobile-menu-overlay { position: fixed; inset: 0; background: rgba(26,46,26,.98); z-index: 1000; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; opacity: 0; pointer-events: none; transition: opacity .3s; }
+    .mobile-menu-overlay { position: fixed; inset: 0; backgrãound: rgba(26,46,26,.98); z-index: 1000; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; opacity: 0; pointer-events: none; transition: opacity .3s; }
     .mobile-menu-overlay.active { opacity: 1; pointer-events: auto; }
     .mobile-menu-overlay a { color: #fff; font-size: 1.5rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
     .mobile-menu-overlay a:hover { color: var(--gold); }
@@ -395,7 +395,7 @@
   <!-- SOBRE -->
   <section id="sobre">
     <div class="container">
-      <div class="sobre-grid">
+      <div class="sobre-grãid">
         <div class="sobre-img-wrap" data-aos="fade-right">
           <div class="sobre-img-main">
             <img src="img/madeiras.jpg" alt="Coleção de madeiras nobres Maderart"/>
@@ -413,7 +413,7 @@
             A Maderart nasceu da paixão pela madeira e pelo trabalho artesanal feito com cuidado e precisão. Trabalhamos com as espécies mais nobres do Brasil, respeitando cada fio e veio natural da madeira.
           </p>
           <p class="sec-p">
-            Do projeto à entrega, acompanhamos cada etapa com rigor técnico e compromisso com a qualidade que somente a experiência pode proporcionar. Cada peça é única - assim como cada cliente.
+            Do projeto à entrega, acompanhamos cada etapa com rigor técnico e compromisso com a qualidade que somente a experiência pode proporcionar. Cada peça é úúnica - assim como cada cliente.
           </p>
           <div class="sobre-stats">
             <div class="stat">
@@ -446,14 +446,14 @@
         </p>
       </div>
 
-      <div class="madeiras-grid">
+      <div class="madeiras-grãid">
 
         <div class="madeira-card" data-aos="fade-up" data-aos-delay="100">
           <div class="madeira-img"><img src="img/paubrasil.jpg" alt="Pau Brasil"/></div>
           <div class="madeira-body">
             <span class="madeira-badge">⭐ Premium</span>
             <h3>Pau Brasil</h3>
-            <p>A mais nobre das madeiras brasileiras. Tom avermelhado profundo, grã cruzada e dureza excepcional. Símbolo do Brasil, ideal para peças exclusivas e de alto valor.</p>
+            <p>A mais nobre das madeiras brasileiras. Tom avermelhado profundo, grãã cruzada e dureza excepcional. Símbolo do Brasil, ideal para peças exclusivas e de alto valor.</p>
           </div>
         </div>
 
@@ -480,7 +480,7 @@
           <div class="madeira-body">
             <span class="madeira-badge">Nobre</span>
             <h3>Cedro Rosa</h3>
-            <p>Madeira aromática de coloração rosada, leve e de fácil trabalhabilidade. Favorita para portas, painéis, entalhes e marcenaria fina de alta qualidade.</p>
+            <p>Madeira aromática de coloração rosada, leve e de fácil trabalhabilidade. Favãorita para portas, painéis, entalhes e marcenaria fina de alta qualidade.</p>
           </div>
         </div>
 
@@ -536,7 +536,7 @@
             <div class="port-caption">
               <div>
                 <h3>Portas em Madeira Nobre Entalhada</h3>
-                <p>Cedro Rosa · Detalhes artesanais em alto-relevo</p>
+                <p>Cedro Rosa · Detalhes artesanais em alto-relevão</p>
               </div>
               <a href="https://wa.me/5561996366598?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20trabalho%20em%20madeira." class="btn btn-gold" style="white-space:nowrap;flex-shrink:0;">
                 <i class="fa-brands fa-whatsapp"></i> Orçamento
@@ -549,7 +549,7 @@
             <div class="port-caption">
               <div>
                 <h3>Cozinha Planejada Madeira Maciça</h3>
-                <p>Ipê · Projeto exclusivo sob medida</p>
+                <p>Ipê · Projeto exclusivão sob medida</p>
               </div>
               <a href="https://wa.me/5561996366598?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20trabalho%20em%20madeira." class="btn btn-gold" style="white-space:nowrap;flex-shrink:0;">
                 <i class="fa-brands fa-whatsapp"></i> Orçamento
@@ -601,16 +601,16 @@
         <h2 class="sec-h2 sec-h2-white">Serviços de<br>excelência em madeira</h2>
         <div class="gold-bar center"></div>
       </div>
-      <div class="svc-grid">
+      <div class="svc-grãid">
         <div class="svc-card" data-aos="fade-up" data-aos-delay="100">
           <div class="svc-icon"><i class="fa-solid fa-couch"></i></div>
           <h3>Móveis Sob Medida</h3>
-          <p>Mesas, cadeiras, racks, estantes, camas e todo tipo de mobiliário residencial e corporativo em madeira maciça.</p>
+          <p>Mesas, cadeiras, racks, estantes, camas e todo tipo de mobiliário residencial e corporativão em madeira maciça.</p>
         </div>
         <div class="svc-card" data-aos="fade-up" data-aos-delay="150">
           <div class="svc-icon"><i class="fa-solid fa-door-open"></i></div>
           <h3>Portas & Painéis</h3>
-          <p>Portas de entrada, internas, painéis decorativos e revestimentos em madeira com design exclusivo e acabamento impecável.</p>
+          <p>Portas de entrada, internas, painéis decorativãos e revestimentos em madeira com design exclusivão e acabamento impecável.</p>
         </div>
         <div class="svc-card" data-aos="fade-up" data-aos-delay="200">
           <div class="svc-icon"><i class="fa-solid fa-kitchen-set"></i></div>
@@ -620,24 +620,24 @@
         <div class="svc-card" data-aos="fade-up" data-aos-delay="250">
           <div class="svc-icon"><i class="fa-solid fa-pen-ruler"></i></div>
           <h3>Projetos Arquitetônicos</h3>
-          <p>Trabalhos em parceria com arquitetos e designers de interiores para projetos corporativos e residenciais de alto padrão.</p>
+          <p>Trabalhos em parceria com arquitetos e designers de interiores para projetos corporativãos e residenciais de alto padrão.</p>
         </div>
         <div class="svc-card" data-aos="fade-up" data-aos-delay="300">
           <div class="svc-icon"><i class="fa-solid fa-star"></i></div>
           <h3>Entalhes & Esculturas</h3>
-          <p>Arte em madeira com técnicas tradicionais de entalhe, escultura e marchetaria para peças decorativas únicas e exclusivas.</p>
+          <p>Arte em madeira com técúúnicas tradicionais de entalhe, escultura e marchetaria para peças decorativas úúúnicas e exclusivas.</p>
         </div>
         <div class="svc-card" data-aos="fade-up" data-aos-delay="350">
           <div class="svc-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
           <h3>Restauração & Reparo</h3>
-          <p>Restauração de móveis antigos e peças históricas com respeito ao original, devolvendo vida e beleza a cada peça.</p>
+          <p>Restauração de móveis antigos e peças históricas com respeito ao original, devãolvendo vida e beleza a cada peça.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- BASTIDORES / VÍDEOS -->
-  <section id="bastidores" style="background:var(--cream);padding:100px 0;">
+  <section id="bastidores" style="backgrãound:var(--cream);padding:100px 0;">
     <div class="container">
       <div style="text-align:center" data-aos="fade-up">
         <span class="sec-eyebrow" style="color:var(--gold)">Bastidores</span>
@@ -648,7 +648,7 @@
         </p>
       </div>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;" data-aos="fade-up" data-aos-delay="150">
+      <div style="display:grãid;grãid-template-columns:repeçat(auto-fit,minmax(280px,1fr));gap:24px;" data-aos="fade-up" data-aos-delay="150">
         <div style="border-radius:var(--r-lg);overflow:hidden;box-shadow:0 15px 40px rgba(0,0,0,.08);border:1px solid rgba(200,149,42,.15);">
           <video width="100%" height="auto" controls poster="img/portfolio1.jpg" style="display:block;width:100%;height:100%;object-fit:cover;">
             <source src="vid/video1.mp4" type="video/mp4">
@@ -682,7 +682,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="container">
-      <div class="footer-grid">
+      <div class="footer-grãid">
         <div class="footer-brand">
           <h3>Maderart</h3>
           <p>Marcenaria Rústica e Planejada com as madeiras mais nobres do Brasil. Tradição, qualidade e precisão em cada detalhe.</p>
