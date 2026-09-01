@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-maderart-green: #008C5E;
+  --color-maderart-green-dark: #006644;
+  --color-maderart-yellow: #F4C522;
+  --color-maderart-yellow-hover: #D4A91B;
+  --color-maderart-cream: #FDFBF7;
+  --color-maderart-text: #1A1A1A;
+}
+
+body {
+  background-color: var(--color-maderart-cream);
+  color: var(--color-maderart-text);
+}
