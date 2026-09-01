@@ -83,7 +83,7 @@ export default function Home() {
             className="relative"
           >
             <div className="relative h-[700px] w-full overflow-hidden border border-[var(--color-gold)]/20 shadow-[0_20px_50px_rgba(0,0,0,0.5)] group">
-              <Image src="/img/madeiras.jpg" alt="Madeiras Nobres" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+              <Image src="/img/mogno-new.jpg" alt="Madeiras Nobres" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#121F12] to-transparent opacity-60"></div>
             </div>
             <div className="absolute -bottom-10 -right-10 glass-luxury p-10 hidden md:flex flex-col items-center justify-center min-w-[250px]">
@@ -139,9 +139,9 @@ export default function Home() {
           
           <div className="grid md:grid-cols-3 gap-10 text-left">
             {[
-              { title: "Pau Brasil", desc: "Madeira histórica, densa e de durabilidade incomparável. Veios avermelhados de puro luxo.", img: "/img/paubrasil.jpg" },
-              { title: "Mogno", desc: "O rei das madeiras para instrumentos e móveis finos. Acústica perfeita e visual clássico.", img: "/img/madeiras.jpg" },
-              { title: "Ipê & Cedro", desc: "Resistência extrema para ambientes externos e maciez aromática para entalhes finos.", img: "/img/portfolio2.jpg" }
+              { title: "Pau Brasil", desc: "Madeira histórica, densa e de durabilidade incomparável. Veios avermelhados de puro luxo.", img: "/img/paubrasil-new.jpg" },
+              { title: "Mogno", desc: "O rei das madeiras para instrumentos e móveis finos. Acústica perfeita e visual clássico.", img: "/img/mogno-new.jpg" },
+              { title: "Ipê & Cedro", desc: "Resistência extrema para ambientes externos e maciez aromática para entalhes finos.", img: "/img/ipe-new.jpg" }
             ].map((item, i) => (
               <motion.div 
                 key={i}

@@ -18,7 +18,7 @@ export default function InstrumentosClient() {
     <div className="bg-noise">
       <section className="relative min-h-[75vh] w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/img/portfolio2.jpg" alt="Instrumentos" fill className="object-cover scale-105" priority />
+          <Image src="/img/violin-restoration.jpg" alt="Instrumentos" fill className="object-cover scale-105" priority />
         </div>
         <div className="absolute inset-0 z-1 bg-gradient-to-t from-[var(--color-green-dark)] via-[#121F12]/80 to-[#121F12]/40"></div>
         
@@ -76,10 +76,10 @@ export default function InstrumentosClient() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="grid grid-cols-2 gap-6 relative">
             <div className="absolute inset-0 bg-[var(--color-gold)]/10 blur-[100px] z-0 rounded-full"></div>
             <div className="h-[400px] relative rounded-sm overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.6)] border border-[var(--color-gold)]/20 z-10">
-               <Image src="/img/portfolio1.jpg" alt="Detalhe em madeira" fill className="object-cover" />
+               <Image src="/img/piano-tuning.jpg" alt="Detalhe em madeira" fill className="object-cover" />
             </div>
             <div className="h-[400px] relative rounded-sm overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.6)] border border-[var(--color-gold)]/20 mt-16 z-10">
-               <Image src="/img/paubrasil.jpg" alt="Madeira Nobre" fill className="object-cover" />
+               <Image src="/img/madeiras.jpg" alt="Madeira Nobre" fill className="object-cover" />
             </div>
           </motion.div>
         </div>
