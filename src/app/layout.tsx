@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Carter_One } from "next/font/google";
+import { Inter, Chewy } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,7 +9,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const carterOne = Carter_One({
+const chewy = Chewy({
   variable: "--font-heading",
   weight: "400",
   subsets: ["latin"],
@@ -27,9 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="scroll-smooth">
-      <body className={`${inter.variable} ${carterOne.variable} font-sans antialiased bg-maderart-cream text-maderart-text`}>
+      <body className={`${inter.variable} ${chewy.variable} font-sans antialiased`}>
         <Navbar />
-        <main className="min-h-screen pt-20">
+        <main className="min-h-screen">
           {children}
         </main>
         <Footer />
