@@ -183,7 +183,7 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: num * 0.1 }}
                 className="relative rounded-sm overflow-hidden aspect-[9/16] shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-[var(--color-gold)]/30 group"
               >
-                <video src={`/vid/video${num}.mp4`} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" controls preload="metadata"></video>
+                <video src={`/vid/video${num}.mp4`} poster={`/img/portfolio${num}.jpg`} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" controls preload="metadata"></video>
                 <div className="absolute top-4 right-4 glass-luxury px-3 py-1 text-[0.6rem] uppercase tracking-widest text-[var(--color-gold)] z-10 pointer-events-none">
                   Bastidores
                 </div>
